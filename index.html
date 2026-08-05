@@ -60,7 +60,7 @@
   <!-- FLOATING NAVBAR -->
   <header class="fixed top-4 left-0 right-0 z-50 px-4 max-w-2xl mx-auto">
     <div class="glass-nav rounded-full py-3 px-6 flex justify-between items-center shadow-2xl">
-      <img src="image_162726.png" alt="MeuCelular.com" class="h-8 object-contain">
+      <img src="logo.png" alt="MeuCelular.com" class="h-8 object-contain">
       <div class="flex items-center gap-3">
         <span class="hidden md:flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -142,43 +142,48 @@
         <div>
           <label class="block text-xs font-bold uppercase text-zinc-400 mb-3">1. Qual é o problema principal?</label>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            
-            <div onclick="selecionarCardDefeito(this)" class="card-defeito cursor-pointer p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:border-brand-yellow/60 hover:shadow-[0_0_15px_rgba(255,200,0,0.15)] flex flex-col items-center gap-2 select-none">
-              <input type="radio" name="defeito" value="Tela / Vidro Quebrado" class="hidden">
-              <i class="fa-solid fa-mobile-screen text-2xl text-yellow-400"></i>
-              <span class="text-xs font-bold text-zinc-200">Tela Quebrada</span>
-            </div>
-
-            <div onclick="selecionarCardDefeito(this)" class="card-defeito cursor-pointer p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:border-brand-yellow/60 hover:shadow-[0_0_15px_rgba(255,200,0,0.15)] flex flex-col items-center gap-2 select-none">
-              <input type="radio" name="defeito" value="Bateria Viciando / Descarregando Rápido" class="hidden">
-              <i class="fa-solid fa-battery-three-quarters text-2xl text-emerald-400"></i>
-              <span class="text-xs font-bold text-zinc-200">Bateria Fraca</span>
-            </div>
-
-            <div onclick="selecionarCardDefeito(this)" class="card-defeito cursor-pointer p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:border-brand-yellow/60 hover:shadow-[0_0_15px_rgba(255,200,0,0.15)] flex flex-col items-center gap-2 select-none">
-              <input type="radio" name="defeito" value="Aparelho Não Liga / Morto" class="hidden">
-              <i class="fa-solid fa-power-off text-2xl text-blue-400"></i>
-              <span class="text-xs font-bold text-zinc-200">Não Liga</span>
-            </div>
-
-            <div onclick="selecionarCardDefeito(this)" class="card-defeito cursor-pointer p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:border-brand-yellow/60 hover:shadow-[0_0_15px_rgba(255,200,0,0.15)] flex flex-col items-center gap-2 select-none">
-              <input type="radio" name="defeito" value="Caiu na Água / Molhou" class="hidden">
-              <i class="fa-solid fa-droplet text-2xl text-purple-400"></i>
-              <span class="text-xs font-bold text-zinc-200">Caiu na Água</span>
-            </div>
-
-            <div onclick="selecionarCardDefeito(this)" class="card-defeito cursor-pointer p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:border-brand-yellow/60 hover:shadow-[0_0_15px_rgba(255,200,0,0.15)] flex flex-col items-center gap-2 select-none">
-              <input type="radio" name="defeito" value="Câmera Embaçada / Quebrada" class="hidden">
-              <i class="fa-solid fa-camera text-2xl text-orange-400"></i>
-              <span class="text-xs font-bold text-zinc-200">Câmera / Lente</span>
-            </div>
-
-            <div onclick="selecionarCardDefeito(this)" class="card-defeito cursor-pointer p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:border-brand-yellow/60 hover:shadow-[0_0_15px_rgba(255,200,0,0.15)] flex flex-col items-center gap-2 select-none">
-              <input type="radio" name="defeito" value="Outro Defeito / Conector / Placa" class="hidden">
-              <i class="fa-solid fa-wrench text-2xl text-zinc-400"></i>
-              <span class="text-xs font-bold text-zinc-200">Outro Problema</span>
-            </div>
-
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Tela / Vidro Quebrado" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-mobile-screen text-xl text-yellow-400"></i>
+                <span>Tela Quebrada</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Bateria Viciando / Descarregando Rápido" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-battery-three-quarters text-xl text-emerald-400"></i>
+                <span>Bateria Fraca</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Aparelho Não Liga / Morto" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-power-off text-xl text-blue-400"></i>
+                <span>Não Liga</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Caiu na Água / Molhou" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-droplet text-xl text-purple-400"></i>
+                <span>Caiu na Água</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Câmera Embaçada / Quebrada" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-camera text-xl text-orange-400"></i>
+                <span>Câmera / Lente</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Outro Defeito / Conector / Placa" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-wrench text-xl text-zinc-400"></i>
+                <span>Outro Problema</span>
+              </div>
+            </label>
           </div>
         </div>
 

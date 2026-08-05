@@ -1,0 +1,72 @@
+[
+  {
+    "brand": "Apple",
+    "model": "iPhone 15 Pro Max",
+    "repairs": ["Tela Super Retina", "Bateria", "Lente Teleobjetiva", "Vidro Traseiro", "Conector USB-C"],
+    "estimatedTime": "40 - 90 min",
+    "warranty": "12 meses"
+  },
+  {
+    "brand": "Apple",
+    "model": "iPhone 14 Pro",
+    "repairs": ["Tela / Dynamic Island", "Bateria", "Câmera 48MP", "Placa / Carga"],
+    "estimatedTime": "40 - 60 min",
+    "warranty": "12 meses"
+  },
+  {
+    "brand": "Apple",
+    "model": "iPhone 13 Pro Max",
+    "repairs": ["Tela OLED 120Hz", "Bateria", "Câmeras", "Face ID", "Conector Lightning"],
+    "estimatedTime": "40 - 90 min",
+    "warranty": "12 meses"
+  },
+  {
+    "brand": "Apple",
+    "model": "iPhone 13",
+    "repairs": ["Tela OLED", "Bateria", "Vidro Traseiro", "Conector Carga"],
+    "estimatedTime": "30 - 50 min",
+    "warranty": "12 meses"
+  },
+  {
+    "brand": "Apple",
+    "model": "iPhone 12",
+    "repairs": ["Tela OLED Super Retina", "Bateria", "Câmeras Dual 12MP", "Vidro Traseiro"],
+    "estimatedTime": "30 - 50 min",
+    "warranty": "12 meses"
+  },
+  {
+    "brand": "Apple",
+    "model": "iPhone 11",
+    "repairs": ["Troca de Tela", "Troca de Bateria", "Câmera Traseira", "Conector Carga"],
+    "estimatedTime": "30 - 45 min",
+    "warranty": "12 meses"
+  },
+  {
+    "brand": "Samsung",
+    "model": "Galaxy S23 Ultra",
+    "repairs": ["Tela Curved AMOLED", "Bateria", "Módulo S-Pen", "Conector USB-C", "Câmera 200MP"],
+    "estimatedTime": "50 - 90 min",
+    "warranty": "6 meses"
+  },
+  {
+    "brand": "Samsung",
+    "model": "Galaxy A54",
+    "repairs": ["Tela AMOLED", "Bateria", "Tampa Traseira", "Conector Carga"],
+    "estimatedTime": "40 - 60 min",
+    "warranty": "6 meses"
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro",
+    "repairs": ["Tela AMOLED 120Hz", "Bateria", "Conector Carga", "Vidro Câmera"],
+    "estimatedTime": "40 - 60 min",
+    "warranty": "6 meses"
+  },
+  {
+    "brand": "Motorola",
+    "model": "Moto G54",
+    "repairs": ["Tela Display", "Bateria 5000mAh", "Conector Carga", "Alto-falante"],
+    "estimatedTime": "40 - 60 min",
+    "warranty": "6 meses"
+  }
+]
