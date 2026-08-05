@@ -1,27 +1,3 @@
-// Função para aplicar visualmente o estado "Selecionado" aos Cards de Defeito
-function selecionarCardDefeito(elementoCard) {
-  // Remove o estado ativo de todos os outros cards
-  document.querySelectorAll('.card-defeito').forEach(card => {
-    card.classList.remove('border-brand-yellow', 'bg-brand-yellow/15', 'shadow-[0_0_20px_rgba(255,200,0,0.25)]', 'scale-[1.02]');
-    card.classList.add('border-zinc-800', 'bg-zinc-900/90');
-  });
-
-  // Aplica o efeito glow / ativo no card clicado
-  elementoCard.classList.remove('border-zinc-800', 'bg-zinc-900/90');
-  elementoCard.classList.add('border-brand-yellow', 'bg-brand-yellow/15', 'shadow-[0_0_20px_rgba(255,200,0,0.25)]', 'scale-[1.02]');
-
-  // Marca o input radio interno
-  const radio = elementoCard.querySelector('input[type="radio"]');
-  if (radio) {
-    radio.checked = true;
-  }
-
-  // Se o modelo ainda não estiver selecionado, abre o modal de escolha automaticamente
-  if (!modeloSelecionadoObj) {
-    abrirModal();
-  }
-}
-
 function enviarDiagnostico(event) {
   event.preventDefault();
   
@@ -44,4 +20,40 @@ function enviarDiagnostico(event) {
   
   const linkWhatsApp = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensagem)}`;
   window.open(linkWhatsApp, '_blank');
+}
+
+function selecionarCardDefeito(element) {
+  // 1. Remove o estilo ativado de todos os cards de defeito
+  document.querySelectorAll('.card-defeito').forEach(card => {
+    card.classList.remove('border-brand-yellow', 'bg-brand-yellow/10', 'shadow-[0_0_20px_rgba(255,200,0,0.25)]');
+    card.classList.add('border-zinc-800', 'bg-zinc-900/90');
+    
+    // Reseta cor do texto do título
+    const titleSpan = card.querySelector('span');
+    if (titleSpan) {
+      titleSpan.classList.remove('brand-yellow');
+      titleSpan.classList.add('text-zinc-200');
+    }
+  });
+
+  // 2. Aplica o destaque no card clicado
+  element.classList.remove('border-zinc-800', 'bg-zinc-900/90');
+  element.classList.add('border-brand-yellow', 'bg-brand-yellow/10', 'shadow-[0_0_20px_rgba(255,200,0,0.25)]');
+
+  const titleSpan = element.querySelector('span');
+  if (titleSpan) {
+    titleSpan.classList.remove('text-zinc-200');
+    titleSpan.classList.add('brand-yellow');
+  }
+
+  // 3. Marca o radio button interno
+  const radio = element.querySelector('input[type="radio"]');
+  if (radio) {
+    radio.checked = true;
+  }
+
+  // 4. Se ainda não tiver selecionado o celular, abre o modal de seleção
+  if (typeof selecionouDefeito === 'function') {
+    selecionouDefeito();
+  }
 }
