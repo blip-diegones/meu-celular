@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeuCelular.com | Assistência Técnica & iPhones em São Lourenço</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    body {
+      background-color: #09090b;
+      color: #FFFFFF;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      overflow-x: hidden;
+    }
+    .brand-yellow { color: #FFC800; }
+    .bg-brand-yellow { background-color: #FFC800; }
+    .glass-nav {
+      background: rgba(18, 18, 20, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glass-card {
+      background: rgba(24, 24, 27, 0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .big-card { transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+    .big-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px -10px rgba(255, 200, 0, 0.2);
+      border-color: rgba(255, 200, 0, 0.5);
+    }
+    .btn-glow {
+      box-shadow: 0 0 20px rgba(255, 200, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+    .btn-glow:hover {
+      box-shadow: 0 0 35px rgba(255, 200, 0, 0.55);
+      transform: scale(1.02);
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] summary i { transform: rotate(180deg); }
+    #modelModal { transition: opacity 0.25s ease-in-out, visibility 0.25s; }
+    #modelModal.hidden-modal {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+    #modalContent { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+    #modelModal.hidden-modal #modalContent { transform: translateY(20px) scale(0.97); }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="antialiased pb-28 selection:bg-yellow-500 selection:text-black">
+
+  <!-- FLOATING NAVBAR -->
+  <header class="fixed top-4 left-0 right-0 z-50 px-4 max-w-2xl mx-auto">
+    <div class="glass-nav rounded-full py-3 px-6 flex justify-between items-center shadow-2xl">
+      <img src="image_162726.png" alt="MeuCelular.com" class="h-8 object-contain">
+      <div class="flex items-center gap-3">
+        <span class="hidden md:flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Bancada Aberta
+        </span>
+        <a href="https://chat.whatsapp.com/KQqz2w0jAsfILhR19hTFHE?mode=gi_t" target="_blank" 
+           class="text-xs font-bold brand-yellow border border-brand-yellow/30 bg-brand-yellow/10 px-4 py-2 rounded-full hover:bg-brand-yellow hover:text-black transition">
+          GRUPO VIP
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="px-4 pt-32 pb-12 text-center max-w-4xl mx-auto">
+    <span class="inline-block px-3.5 py-1 mb-4 text-xs font-bold tracking-widest text-yellow-400 uppercase bg-yellow-400/10 rounded-full border border-yellow-400/20">
+      Assistência Especializada & Vendas
+    </span>
+    <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white mb-4 leading-tight">
+      Seu celular quebrou?<br>
+      <span class="brand-yellow">Consertamos ainda hoje.</span>
+    </h1>
+    <p class="text-base sm:text-xl text-zinc-300 mb-8 max-w-2xl mx-auto font-normal">
+      Sem enrolação, com garantia escrita e atendimento imediato. A maior estrutura de tecnologia do Sul de Minas.
+    </p>
+
+    <!-- FOTO REAL DA LOJA -->
+    <div class="relative w-full rounded-3xl overflow-hidden border border-white/10 mb-10 shadow-2xl group">
+      <div class="aspect-video w-full bg-zinc-900 flex items-center justify-center relative">
+        <img src="https://images.unsplash.com/photo-1597740985671-2a8a3b80502e?q=80&w=1200&auto=format&fit=crop" 
+             alt="Laboratório Técnico MeuCelular.com" 
+             class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-auto bg-zinc-950/80 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center gap-4 text-left">
+          <div class="w-10 h-10 rounded-full bg-brand-yellow/20 flex items-center justify-center brand-yellow text-xl">
+            <i class="fa-solid fa-microscope"></i>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-white">Laboratório Próprio em São Lourenço</p>
+            <p class="text-[11px] text-zinc-400">Técnicos certificados e peças de altíssima qualidade</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MÉTRICAS -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="glass-card p-4 rounded-2xl">
+        <div class="text-2xl sm:text-4xl font-black brand-yellow">15.000+</div>
+        <div class="text-xs text-zinc-400 font-medium mt-1">Aparelhos Salvos</div>
+      </div>
+      <div class="glass-card p-4 rounded-2xl">
+        <div class="text-2xl sm:text-4xl font-black brand-yellow">5.0 ★</div>
+        <div class="text-xs text-zinc-400 font-medium mt-1">Nota Máxima Google</div>
+      </div>
+      <div class="glass-card p-4 rounded-2xl">
+        <div class="text-2xl sm:text-4xl font-black brand-yellow">1 Ano</div>
+        <div class="text-xs text-zinc-400 font-medium mt-1">Garantia Escrita</div>
+      </div>
+      <div class="glass-card p-4 rounded-2xl">
+        <div class="text-2xl sm:text-4xl font-black brand-yellow">30 min</div>
+        <div class="text-xs text-zinc-400 font-medium mt-1">Tempo Médio Troca Tela</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÓDULO INTELIGENTE -->
+  <section class="max-w-3xl mx-auto px-4 my-16">
+    <div class="glass-card p-6 sm:p-8 rounded-3xl border border-brand-yellow/30 bg-gradient-to-b from-zinc-900 to-zinc-950">
+      <div class="text-center mb-6">
+        <span class="text-[10px] font-bold tracking-widest text-brand-yellow uppercase bg-brand-yellow/10 px-3 py-1 rounded-full border border-brand-yellow/20">
+          Diagnóstico Inteligente
+        </span>
+        <h2 class="text-xl sm:text-3xl font-black text-white mt-2">O que aconteceu com seu celular?</h2>
+        <p class="text-xs sm:text-sm text-zinc-400">Selecione o sintoma para carregarmos as informações de reparo.</p>
+      </div>
+
+      <form id="diagForm" onsubmit="enviarDiagnostico(event)" class="space-y-6">
+        <div>
+          <label class="block text-xs font-bold uppercase text-zinc-400 mb-3">1. Qual é o problema principal?</label>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Tela / Vidro Quebrado" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-mobile-screen text-xl text-yellow-400"></i>
+                <span>Tela Quebrada</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Bateria Viciando / Descarregando Rápido" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-battery-three-quarters text-xl text-emerald-400"></i>
+                <span>Bateria Fraca</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Aparelho Não Liga / Morto" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-power-off text-xl text-blue-400"></i>
+                <span>Não Liga</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Caiu na Água / Molhou" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-droplet text-xl text-purple-400"></i>
+                <span>Caiu na Água</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Câmera Embaçada / Quebrada" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-camera text-xl text-orange-400"></i>
+                <span>Câmera / Lente</span>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="defeito" value="Outro Defeito / Conector / Placa" onchange="selecionouDefeito()" class="peer hidden">
+              <div class="p-4 bg-zinc-900/90 border border-zinc-800 rounded-2xl text-center text-xs font-semibold text-zinc-300 peer-checked:border-brand-yellow peer-checked:bg-brand-yellow/10 peer-checked:text-brand-yellow transition flex flex-col items-center gap-2">
+                <i class="fa-solid fa-wrench text-xl text-zinc-400"></i>
+                <span>Outro Problema</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-zinc-400 mb-2">2. Qual é a Marca e Modelo?</label>
+          <div onclick="abrirModal()" class="w-full bg-zinc-900 border border-zinc-700 hover:border-brand-yellow cursor-pointer rounded-2xl p-4 flex items-center justify-between transition group">
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-mobile-screen-button text-brand-yellow text-lg"></i>
+              <span id="selectedDeviceText" class="text-sm font-semibold text-zinc-400">Clique para selecionar o celular...</span>
+            </div>
+            <span class="text-xs font-bold text-brand-yellow bg-brand-yellow/10 px-3 py-1.5 rounded-xl group-hover:bg-brand-yellow group-hover:text-black transition">
+              Selecionar <i class="fa-solid fa-magnifying-glass ml-1"></i>
+            </span>
+          </div>
+          <input type="hidden" id="inputModeloFinal" name="modelo">
+        </div>
+
+        <div id="knowledgeCard" class="hidden p-5 rounded-2xl bg-zinc-900/90 border border-zinc-800 space-y-3">
+          <div class="flex justify-between items-start border-b border-zinc-800 pb-3">
+            <div>
+              <span class="text-[10px] uppercase tracking-wider font-bold text-brand-yellow" id="kbBrand">Apple</span>
+              <h4 class="text-base font-bold text-white" id="kbModel">iPhone 13 Pro Max</h4>
+            </div>
+            <span class="text-[11px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-1 rounded-full flex items-center gap-1">
+              <i class="fa-solid fa-shield-halved text-[10px]"></i> Garantia: <strong id="kbWarranty">12 meses</strong>
+            </span>
+          </div>
+
+          <div>
+            <p class="text-xs font-bold text-zinc-400 mb-2">Reparos suportados & falhas comuns deste modelo:</p>
+            <div id="kbTags" class="flex flex-wrap gap-1.5 text-[11px]"></div>
+          </div>
+
+          <div class="pt-2 flex items-center justify-between text-xs text-zinc-400 border-t border-zinc-800/60">
+            <span class="flex items-center gap-1.5"><i class="fa-regular fa-clock brand-yellow"></i> Tempo estimado no laboratório:</span>
+            <strong class="text-white" id="kbTime">40-90 min</strong>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-4 bg-brand-yellow text-black font-black text-sm uppercase rounded-xl btn-glow flex items-center justify-center gap-2 mt-4 cursor-pointer">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          Enviar Diagnóstico & Gerar Orçamento
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="max-w-4xl mx-auto px-4 py-12 border-t border-white/5">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white">Como funciona o atendimento?</h2>
+      <p class="text-xs sm:text-sm text-zinc-400 mt-1">Transparência total do primeiro contato à entrega</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-center">
+      <div class="p-5 glass-card rounded-2xl relative">
+        <div class="w-10 h-10 rounded-full bg-brand-yellow text-black font-black flex items-center justify-center mx-auto mb-3">1</div>
+        <h3 class="font-bold text-sm text-white mb-1">Mande Mensagem</h3>
+        <p class="text-xs text-zinc-400">Tire suas dúvidas ou envie seu diagnóstico em segundos.</p>
+      </div>
+
+      <div class="p-5 glass-card rounded-2xl relative">
+        <div class="w-10 h-10 rounded-full bg-brand-yellow text-black font-black flex items-center justify-center mx-auto mb-3">2</div>
+        <h3 class="font-bold text-sm text-white mb-1">Receba o Valor</h3>
+        <p class="text-xs text-zinc-400">Orçamento prévio sem surpresas ou taxas escondidas.</p>
+      </div>
+
+      <div class="p-5 glass-card rounded-2xl relative">
+        <div class="w-10 h-10 rounded-full bg-brand-yellow text-black font-black flex items-center justify-center mx-auto mb-3">3</div>
+        <h3 class="font-bold text-sm text-white mb-1">Traga o Celular</h3>
+        <p class="text-xs text-zinc-400">Atendimento presencial no centro de São Lourenço.</p>
+      </div>
+
+      <div class="p-5 glass-card rounded-2xl relative">
+        <div class="w-10 h-10 rounded-full bg-brand-yellow text-black font-black flex items-center justify-center mx-auto mb-3">4</div>
+        <h3 class="font-bold text-sm text-white mb-1">Retire Prontinho</h3>
+        <p class="text-xs text-zinc-400">Aparelho testado, higienizado e com garantia escrita.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERGUNTAS FREQUENTES -->
+  <section class="max-w-2xl mx-auto px-4 py-12">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold text-white">Dúvidas Frequentes</h2>
+    </div>
+
+    <div class="space-y-3">
+      <details class="glass-card rounded-2xl p-4 group cursor-pointer">
+        <summary class="flex justify-between items-center font-bold text-sm text-white">
+          <span>Eu perco meus dados e fotos durante o conserto?</span>
+          <i class="fa-solid fa-chevron-down text-zinc-400 text-xs transition-transform duration-300"></i>
+        </summary>
+        <p class="text-xs text-zinc-400 mt-3 leading-relaxed">
+          Não! Em reparos de tela, bateria, câmera e conectores, seus dados permanecem intactos no aparelho.
+        </p>
+      </details>
+
+      <details class="glass-card rounded-2xl p-4 group cursor-pointer">
+        <summary class="flex justify-between items-center font-bold text-sm text-white">
+          <span>Quanto tempo demora a troca de tela ou bateria?</span>
+          <i class="fa-solid fa-chevron-down text-zinc-400 text-xs transition-transform duration-300"></i>
+        </summary>
+        <p class="text-xs text-zinc-400 mt-3 leading-relaxed">
+          A maioria dos serviços em iPhones e celulares Android é finalizada no mesmo dia (tempo médio de 30 a 50 minutos).
+        </p>
+      </details>
+
+      <details class="glass-card rounded-2xl p-4 group cursor-pointer">
+        <summary class="flex justify-between items-center font-bold text-sm text-white">
+          <span>Vocês aceitam meu celular usado como entrada para um novo?</span>
+          <i class="fa-solid fa-chevron-down text-zinc-400 text-xs transition-transform duration-300"></i>
+        </summary>
+        <p class="text-xs text-zinc-400 mt-3 leading-relaxed">
+          Sim! Avaliamos seu iPhone seminovo na hora para você dar de entrada na compra de um modelo superior.
+        </p>
+      </details>
+
+      <details class="glass-card rounded-2xl p-4 group cursor-pointer">
+        <summary class="flex justify-between items-center font-bold text-sm text-white">
+          <span>Quais são as formas de pagamento?</span>
+          <i class="fa-solid fa-chevron-down text-zinc-400 text-xs transition-transform duration-300"></i>
+        </summary>
+        <p class="text-xs text-zinc-400 mt-3 leading-relaxed">
+          Aceitamos PIX, cartão de crédito em até 21x sem juros e opção de parcelamento via Boleto.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="max-w-4xl mx-auto px-4 text-center text-xs text-zinc-500 border-t border-white/5 pt-8 mb-16">
+    <p class="font-bold text-zinc-400 mb-1">MeuCelular.com | São Lourenço - MG</p>
+    <p class="mb-4">O maior ecossistema de smartphones e assistência do Sul de Minas.</p>
+    <p>© 2026 Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- BOTÃO FIXO WHATSAPP -->
+  <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-black/90 to-transparent z-40">
+    <div class="max-w-md mx-auto">
+      <a href="https://api.whatsapp.com/message/K6PUIU3PMU7JK1?autoload=1&app_absent=0&text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." 
+         target="_blank" 
+         class="flex items-center justify-center w-full py-4 px-6 bg-brand-yellow text-black font-black text-base rounded-2xl btn-glow uppercase tracking-wider gap-3">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        Falar com Atendente Agora
+      </a>
+    </div>
+  </div>
+
+  <!-- MODAL BUSCA DE MODELO -->
+  <div id="modelModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden-modal">
+    <div id="modalContent" class="w-full max-w-lg bg-zinc-950 border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[85vh]">
+      
+      <div class="p-4 sm:p-5 border-b border-zinc-800 flex justify-between items-center bg-zinc-900/50">
+        <div>
+          <h3 class="text-base font-bold text-white">Selecione seu Aparelho</h3>
+          <p class="text-[11px] text-zinc-400">Base de dados da assistência técnica</p>
+        </div>
+        <button onclick="fecharModal()" type="button" class="w-8 h-8 rounded-full bg-zinc-800 text-zinc-400 hover:text-white flex items-center justify-center">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-4 border-b border-zinc-800/80 bg-zinc-900/30">
+        <div class="relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-zinc-500 text-sm"></i>
+          <input type="text" id="searchInput" oninput="filtrarModelos()" placeholder="Digite seu modelo (ex: iPhone 12, Moto G54, S23)..." 
+                 class="w-full bg-zinc-900 border border-zinc-700 text-white pl-11 pr-4 py-3 rounded-xl text-sm focus:border-brand-yellow focus:outline-none">
+        </div>
+
+        <div class="flex gap-2 mt-3 overflow-x-auto pb-1 text-xs no-scrollbar">
+          <button type="button" onclick="setMarcaFiltro('Todas')" class="marca-btn active px-3 py-1.5 rounded-lg bg-brand-yellow text-black font-bold whitespace-nowrap">Todas</button>
+          <button type="button" onclick="setMarcaFiltro('Apple')" class="marca-btn px-3 py-1.5 rounded-lg bg-zinc-800 text-zinc-300 hover:bg-zinc-700 font-medium whitespace-nowrap">🍎 Apple</button>
+          <button type="button" onclick="setMarcaFiltro('Samsung')" class="marca-btn px-3 py-1.5 rounded-lg bg-zinc-800 text-zinc-300 hover:bg-zinc-700 font-medium whitespace-nowrap">📱 Samsung</button>
+          <button type="button" onclick="setMarcaFiltro('Xiaomi')" class="marca-btn px-3 py-1.5 rounded-lg bg-zinc-800 text-zinc-300 hover:bg-zinc-700 font-medium whitespace-nowrap">🔥 Xiaomi</button>
+          <button type="button" onclick="setMarcaFiltro('Motorola')" class="marca-btn px-3 py-1.5 rounded-lg bg-zinc-800 text-zinc-300 hover:bg-zinc-700 font-medium whitespace-nowrap">🦋 Motorola</button>
+        </div>
+      </div>
+
+      <div id="listaModelos" class="p-3 overflow-y-auto space-y-1 flex-1 max-h-[50vh]"></div>
+
+      <div class="p-3 border-t border-zinc-800 bg-zinc-900/40 text-center">
+        <button type="button" onclick="selecionarOutroModelo()" class="text-xs font-semibold brand-yellow hover:underline">
+          Não encontrou seu celular na lista? Clique aqui para digitar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/modal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
