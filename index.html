@@ -55,7 +55,7 @@
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
-<body class="antialiased pb-28 selection:bg-yellow-500 selection:text-black">
+<body class="antialiased pb-8 selection:bg-yellow-500 selection:text-black">
 
   <!-- FLOATING NAVBAR -->
   <header class="fixed top-4 left-0 right-0 z-50 px-4 max-w-2xl mx-auto">
@@ -339,17 +339,13 @@
     <p>© 2026 Todos os direitos reservados.</p>
   </footer>
 
-  <!-- BOTÃO FIXO WHATSAPP -->
-  <div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-black/90 to-transparent z-40">
-    <div class="max-w-md mx-auto">
-      <a href="https://api.whatsapp.com/message/K6PUIU3PMU7JK1?autoload=1&app_absent=0&text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." 
-         target="_blank" 
-         class="flex items-center justify-center w-full py-4 px-6 bg-brand-yellow text-black font-black text-base rounded-2xl btn-glow uppercase tracking-wider gap-3">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
-        Falar com Atendente Agora
-      </a>
-    </div>
-  </div>
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://api.whatsapp.com/message/K6PUIU3PMU7JK1?autoload=1&app_absent=0&text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento."
+     target="_blank"
+     class="fixed bottom-5 right-5 z-40 flex items-center gap-2 bg-brand-yellow text-black font-black rounded-full shadow-2xl btn-glow pl-4 pr-5 py-3.5 uppercase text-xs tracking-wider">
+    <i class="fa-brands fa-whatsapp text-xl"></i>
+    <span>Falar Agora</span>
+  </a>
 
   <!-- MODAL BUSCA DE MODELO -->
   <div id="modelModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden-modal">
